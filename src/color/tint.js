@@ -26,7 +26,7 @@ import mix from './mix'
  */
 
 function tint(percentage: number | string, color: string): string {
-  return mix(parseFloat(percentage), 'rgb(255, 255, 255)', color)
+  return mix(percentage, 'rgb(255, 255, 255)', color)
 }
 
 // prettier-ignore
