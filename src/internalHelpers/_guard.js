@@ -1,11 +1,8 @@
 // @flow
-
-function guard(
+export default function guard(
   lowerBoundary: number,
   upperBoundary: number,
   value: number,
 ): number {
-  return Math.max(lowerBoundary, Math.min(upperBoundary, value))
+  return Math.min(Math.max(lowerBoundary, value), upperBoundary)
 }
-
-export default guard
