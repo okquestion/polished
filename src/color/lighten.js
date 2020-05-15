@@ -1,8 +1,6 @@
 // @flow
+import adjustLightness from './_adjustlightness'
 import curry from '../internalHelpers/_curry'
-import guard from '../internalHelpers/_guard'
-import parseToHsl from './parseToHsl'
-import toColorString from './toColorString'
 
 /**
  * Returns a string value for the lightened color.
@@ -28,12 +26,7 @@ import toColorString from './toColorString'
  * }
  */
 function lighten(amount: number | string, color: string): string {
-  if (color === 'transparent') return color
-  const hslColor = parseToHsl(color)
-  return toColorString({
-    ...hslColor,
-    lightness: guard(0, 1, hslColor.lightness + parseFloat(amount)),
-  })
+  return adjustLightness(parseFloat(amount), color)
 }
 
 // prettier-ignore

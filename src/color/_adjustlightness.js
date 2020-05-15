@@ -1,6 +1,7 @@
 // @flow
-import adjustLightness from './_adjustlightness'
-import curry from '../internalHelpers/_curry'
+import guard from '../internalHelpers/_guard'
+import parseToHsl from './parseToHsl'
+import toColorString from './toColorString'
 
 /**
  * Returns a string value for the darkened color.
@@ -25,10 +26,11 @@ import curry from '../internalHelpers/_curry'
  *   background: "rgba(255,189,49,0.7)";
  * }
  */
-function darken(amount: number | string, color: string): string {
-  return adjustLightness(parseFloat(amount) * -1, color)
+export default function adjustLightness(amount: number, color: string): string {
+  if (color === 'transparent') return color
+  const hslColor = parseToHsl(color)
+  return toColorString({
+    ...hslColor,
+    lightness: guard(0, 1, hslColor.lightness + amount),
+  })
 }
-
-// prettier-ignore
-const curriedDarken = curry/* ::<number | string, string, string> */(darken)
-export default curriedDarken
