@@ -1,5 +1,5 @@
 // @flow
-import adjustLightness from './_adjustlightness'
+import adjustColor from './_adjustColor'
 import curry from '../internalHelpers/_curry'
 
 /**
@@ -26,7 +26,7 @@ import curry from '../internalHelpers/_curry'
  * }
  */
 function lighten(amount: number | string, color: string): string {
-  return adjustLightness(parseFloat(amount), color)
+  return adjustColor(parseFloat(amount), color, 'lightness')
 }
 
 // prettier-ignore

@@ -1,8 +1,6 @@
 // @flow
+import adjustColor from './_adjustColor'
 import curry from '../internalHelpers/_curry'
-import guard from '../internalHelpers/_guard'
-import parseToHsl from './parseToHsl'
-import toColorString from './toColorString'
 
 /**
  * Increases the intensity of a color. Its range is between 0 to 1. The first
@@ -30,12 +28,7 @@ import toColorString from './toColorString'
  * }
  */
 function saturate(amount: number | string, color: string): string {
-  if (color === 'transparent') return color
-  const hslColor = parseToHsl(color)
-  return toColorString({
-    ...hslColor,
-    saturation: guard(0, 1, hslColor.saturation + parseFloat(amount)),
-  })
+  return adjustColor(parseFloat(amount), color, 'saturation')
 }
 
 // prettier-ignore

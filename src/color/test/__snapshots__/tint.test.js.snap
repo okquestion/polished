@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test should return transparent when passed transparent 1`] = `"transparent"`;
+exports[`test should return transparent when passed transparent 1`] = `"rgb(255, 255, 255)"`;
 
 exports[`test should tint the provided 4-digit hex color with white by the given percentage 1`] = `"rgba(122,255,122,0.6475)"`;
 

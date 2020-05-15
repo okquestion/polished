@@ -26,11 +26,15 @@ import toColorString from './toColorString'
  *   background: "rgba(255,189,49,0.7)";
  * }
  */
-export default function adjustLightness(amount: number, color: string): string {
+export default function adjustColor(
+  amount: number,
+  color: string,
+  property: string,
+): string {
   if (color === 'transparent') return color
   const hslColor = parseToHsl(color)
   return toColorString({
     ...hslColor,
-    lightness: guard(0, 1, hslColor.lightness + amount),
+    [property]: guard(0, 1, hslColor[property] + amount),
   })
 }
