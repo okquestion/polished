@@ -1,7 +1,6 @@
 // @flow
 import curry from '../internalHelpers/_curry'
-import parseToHsl from './parseToHsl'
-import toColorString from './toColorString'
+import setColorProperty from './_setColorProperty'
 
 /**
  * Sets the saturation of a color to the provided value. The saturation range can be
@@ -27,11 +26,7 @@ import toColorString from './toColorString'
  * }
  */
 function setSaturation(saturation: number | string, color: string): string {
-  if (color === 'transparent') return color
-  return toColorString({
-    ...parseToHsl(color),
-    saturation: parseFloat(saturation),
-  })
+  return setColorProperty(saturation, color, 'saturation')
 }
 
 // prettier-ignore

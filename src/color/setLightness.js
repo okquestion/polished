@@ -1,7 +1,6 @@
 // @flow
 import curry from '../internalHelpers/_curry'
-import parseToHsl from './parseToHsl'
-import toColorString from './toColorString'
+import setColorProperty from './_setColorProperty'
 
 /**
  * Sets the lightness of a color to the provided value. The lightness range can be
@@ -27,11 +26,7 @@ import toColorString from './toColorString'
  * }
  */
 function setLightness(lightness: number | string, color: string): string {
-  if (color === 'transparent') return color
-  return toColorString({
-    ...parseToHsl(color),
-    lightness: parseFloat(lightness),
-  })
+  return setColorProperty(lightness, color, 'lightness')
 }
 
 // prettier-ignore

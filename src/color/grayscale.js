@@ -1,6 +1,5 @@
 // @flow
-import parseToHsl from './parseToHsl'
-import toColorString from './toColorString'
+import setColorProperty from './_setColorProperty'
 
 /**
  * Converts the color to a grayscale, by reducing its saturation to 0.
@@ -25,9 +24,5 @@ import toColorString from './toColorString'
  * }
  */
 export default function grayscale(color: string): string {
-  if (color === 'transparent') return color
-  return toColorString({
-    ...parseToHsl(color),
-    saturation: 0,
-  })
+  return setColorProperty(0, color, 'saturation')
 }
