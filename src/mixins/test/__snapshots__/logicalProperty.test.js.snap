@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logicalProperty returns logical properties for caption-side 1`] = `
+Array [
+  Object {
+    "captionSide": "left",
+  },
+  Object {
+    "captionSide": "inline-start",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for caption-side 2`] = `
+Array [
+  Object {
+    "captionSide": "right",
+  },
+  Object {
+    "captionSide": "inline-end",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for caption-side 3`] = `
+Array [
+  Object {
+    "captionSide": "right",
+  },
+  Object {
+    "captionSide": "inline-end",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for clear 1`] = `
+Array [
+  Object {
+    "clear": "left",
+  },
+  Object {
+    "clear": "inline-start",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for clear 2`] = `
+Array [
+  Object {
+    "clear": "right",
+  },
+  Object {
+    "clear": "inline-end",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for float 1`] = `
+Array [
+  Object {
+    "float": "left",
+  },
+  Object {
+    "float": "inline-start",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for float 2`] = `
+Array [
+  Object {
+    "float": "right",
+  },
+  Object {
+    "float": "inline-end",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for height & width 1`] = `
+Array [
+  Object {
+    "height": "200px",
+  },
+  Object {
+    "blockSize": "200px",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for height & width 2`] = `
+Array [
+  Object {
+    "width": "300px",
+  },
+  Object {
+    "inlineSize": "300px",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for min/max-height & min/max- width 1`] = `
+Array [
+  Object {
+    "minHeight": "200px",
+  },
+  Object {
+    "minBlockSize": "200px",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for min/max-height & min/max- width 2`] = `
+Array [
+  Object {
+    "minWidth": "300px",
+  },
+  Object {
+    "minInlineSize": "300px",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for min/max-height & min/max- width 3`] = `
+Array [
+  Object {
+    "maxHeight": "200px",
+  },
+  Object {
+    "maxBlockSize": "200px",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for min/max-height & min/max- width 4`] = `
+Array [
+  Object {
+    "maxWidth": "300px",
+  },
+  Object {
+    "maxInlineSize": "300px",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for min/max-height & min/max- width 5`] = `
+Array [
+  Object {
+    "minHeight": "200px",
+  },
+  Object {
+    "minBlockSize": "200px",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for min/max-height & min/max- width 6`] = `
+Array [
+  Object {
+    "maxWidth": "300px",
+  },
+  Object {
+    "maxInlineSize": "300px",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for resize 1`] = `
+Array [
+  Object {
+    "resize": "horizontal",
+  },
+  Object {
+    "resize": "inline",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for resize 2`] = `
+Array [
+  Object {
+    "resize": "vertical",
+  },
+  Object {
+    "resize": "block",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for text-align 1`] = `
+Array [
+  Object {
+    "textAlign": "left",
+  },
+  Object {
+    "textAlign": "start",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for text-align 2`] = `
+Array [
+  Object {
+    "textAlign": "right",
+  },
+  Object {
+    "textAlign": "end",
+  },
+]
+`;
+
+exports[`logicalProperty returns logical properties for text-align 3`] = `
+Array [
+  Object {
+    "textAlign": "right",
+  },
+  Object {
+    "textAlign": "end",
+  },
+]
+`;
